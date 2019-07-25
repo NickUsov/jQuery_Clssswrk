@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classwork</title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+     <!--    
+    1)	Скачайте и подключите к данному документу библиотеку jQuery;
+    2)	Создайте на странице текстовое поле и кнопку.
+    3)	Создайте произвольное количество элементов на странице с различными уровнями вложенности.
+    4)	Цель: в текстовое поле вводим селектор и нажимаем на кнопку. Элемент, который соответвует селектору, меняет цвет. 
+    -->
+    <script>
+        $('body').html('<p>lorem ipsum</p><button>button</button><div><ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul></div><input type="text"></input>');
+        $('button').on('click', ()=> {
+            
+            console.log($('input').val());
+            $($('input').val()).css('background-color', 'yellow');
+        });
+    </script>
+</body>
+</html>
